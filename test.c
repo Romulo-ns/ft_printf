@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 18:08:19 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/12 15:16:37 by romdo-na         ###   ########.fr       */
+/*   Created: 2026/05/12 14:01:08 by romdo-na          #+#    #+#             */
+/*   Updated: 2026/05/12 14:03:31 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdio.h>
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int     ft_printf       (const char *, ...);
-void	ft_putchar      (char c);
-
-
-#endif
+int main()
+{
+    printf("ola %w, seu numero eh: %i\n", "romulo", 1);
+    return (0);
+}

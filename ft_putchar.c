@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 18:08:19 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/12 15:16:37 by romdo-na         ###   ########.fr       */
+/*   Created: 2026/05/12 15:13:21 by romdo-na          #+#    #+#             */
+/*   Updated: 2026/05/12 15:16:24 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-
-# include <stdarg.h>
-# include <unistd.h>
-
-int     ft_printf       (const char *, ...);
-void	ft_putchar      (char c);
-
-
-#endif
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
