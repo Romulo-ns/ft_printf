@@ -6,17 +6,22 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:46:33 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/13 11:31:20 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/13 14:37:52 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void print_arg (char c, va_list args )
+int print_arg (char c, va_list args )
 {
+    int count;
+
+    count = 0;
     if ( c == 'c' )
-        ft_putchar(args);
-    // else if ( c == 's' )
+        count = ft_putchar(va_arg(args, int));
+    else if ( c == 's' )
+        count = ft_putstr(va_arg(args, char *));
+
     // else if ( c == 'p' )
     // else if ( c == 'd' )
     // else if ( c == 'i' )
@@ -24,6 +29,8 @@ void print_arg (char c, va_list args )
     // else if ( c == 'x' )
     // else if ( c == 'X' )
     // else if ( c == '%' )
+
+    return (count);
 }
 /*
 caso s

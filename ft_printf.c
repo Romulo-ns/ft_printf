@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:17:42 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/13 12:20:27 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:12:03 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int ft_printf(const char *str, ...)
 			if (check_type(str[i + 1]))
 			{
 				i++;
-				print_arg(str[i], args);
+				count += print_arg(str[i], args);
 				// printf("hamburguer %s\n", va_arg(args, int *));
 				// print_arg(str[i], args[a]);
 			}
@@ -55,10 +55,10 @@ int ft_printf(const char *str, ...)
 }
 
 int main (){
-	char ptr1;
+	char *ptr1;
 
-	ptr1 = 'a';
-	ft_printf("oioi %c\n", ptr1);
+	ptr1 = "ahhhhhhhhhh";
+	ft_printf("oioi %s\n", ptr1);
 
 	return(0);
 }
