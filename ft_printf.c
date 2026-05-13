@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:17:42 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/12 15:14:03 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/13 12:20:27 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,42 @@ int check_type(char c)
 int ft_printf(const char *str, ...)
 {
 	int	i;
+	int	count;
 	va_list args;
 
+	count = 0;
 	i = 0;
 	va_start(args, str);
-	while(str[i++])
+	while(str[i])
 	{
 		if (str[i] == '%')
-			if (check_type(str[i +1]));
+		{
+			if (check_type(str[i + 1]))
+			{
+				i++;
+				print_arg(str[i], args);
+				// printf("hamburguer %s\n", va_arg(args, int *));
+				// print_arg(str[i], args[a]);
+			}
+		}
 		else
-			ft_putchar(str[i]);
+		{
+			count++;
+			write(1, &str[i], 1);
+		}
+		i++;
 	}
 
 	va_end(args);
-	return (0);
+	return (count);
 	
 }
 
 int main (){
-	char *ptr;
+	char ptr1;
 
-	ptr = "ola mundo";
-	ft_printf("%s\n", ptr);
+	ptr1 = 'a';
+	ft_printf("oioi %c\n", ptr1);
 
 	return(0);
 }
