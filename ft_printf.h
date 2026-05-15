@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 18:08:19 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/15 16:22:00 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/15 17:19:57 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int     ft_putstr       (char *str);
 int     ft_putnbr       (int n);
 int		ft_putunsigned	(unsigned int n);
 int		ft_puthex		(unsigned int n, char format);
+int		ft_print_ptr	(args);
+
 
 
 
