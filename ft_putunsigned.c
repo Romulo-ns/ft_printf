@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 18:08:19 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/15 15:42:24 by romdo-na         ###   ########.fr       */
+/*   Created: 2026/05/15 14:50:29 by romdo-na          #+#    #+#             */
+/*   Updated: 2026/05/15 15:41:33 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdio.h>
+int ft_putunsigned(unsigned int n)
+{
+    long    count;
+    long    nb;
+	char	c;
 
-
-int     ft_printf       (const char *, ...);
-int     print_arg       (char c, va_list args );
-int	    ft_putchar      (int c);
-int     ft_putstr       (char *str);
-int     ft_putnbr       (int n);
-int		ft_putunsigned	(unsigned int n);
-
-
-
-#endif
+    nb = n;
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	c = (nb % 10) + '0';
+    count++;
+	write(1, &c, 1);
+    return (count);
+}
