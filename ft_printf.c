@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:17:42 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/15 15:43:17 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/15 16:23:14 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int main (){
 	int		nbm1;
 
 	ptr1 = "ahhh%hhhhhhh";
-	nbm1 = -123;
-	ft_printf("oioi %% %s agora numeros: %u\n", ptr1, nbm1);
-	printf("oioi %% %s agora numeros: %u\n", ptr1, nbm1);
+	nbm1 = 0;
+	ft_printf("oioi %% %s agora numeros: %x\n", ptr1, nbm1);
+	printf("oioi %% %s agora numeros: %x\n", ptr1, nbm1);
 
 	return(0);
 }

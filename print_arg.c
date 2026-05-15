@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:46:33 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/15 15:41:46 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/15 16:21:06 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int print_arg (char c, va_list args )
         count = ft_putnbr(va_arg(args, int));
     else if ( c == 'u' )
         count = ft_putunsigned(va_arg(args, unsigned int));
+    else if ( c == 'x' || c == 'X')
+        count = ft_puthex(va_arg(args, int), c);
 
-    // else if ( c == 'x' )
-    // else if ( c == 'X' )
 
     return (count);
 }
