@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:17:42 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/13 13:12:03 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/15 12:22:30 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,13 @@ int ft_printf(const char *str, ...)
 }
 
 int main (){
-	char *ptr1;
+	char	*ptr1;
+	int		nbm1;
 
-	ptr1 = "ahhhhhhhhhh";
-	ft_printf("oioi %s\n", ptr1);
+	ptr1 = "ahhh%hhhhhhh";
+	nbm1 = 123;
+	ft_printf("oioi %% %s agora numeros: %d\n", ptr1, nbm1);
+	printf("oioi %% %s agora numeros: %d\n", ptr1, nbm1);
 
 	return(0);
 }
