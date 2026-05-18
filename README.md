@@ -71,65 +71,6 @@ make fclean
 make re
 ```
 
----
-
-## Usage
-
-Example:
-
-```c
-#include "ft_printf.h"
-
-int main(void)
-{
-    ft_printf("Hello %s\n", "42");
-    ft_printf("Value: %d\n", 42);
-    ft_printf("Hexadecimal: %x\n", 255);
-    return (0);
-}
-```
-
-Expected output:
-
-```text
-Hello 42
-Value: 42
-Hexadecimal: ff
-```
-
----
-
-## Algorithm and Data Structure
-
-The implementation uses a dispatcher-based architecture.
-
-The `ft_printf()` function parses the format string character by character.
-When the parser encounters a `%` symbol, the following character is interpreted
-as a conversion specifier.
-
-Each specifier is delegated to a dedicated handler function responsible for
-printing the corresponding data type.
-
-Example:
-- `%d` → integer handler
-- `%s` → string handler
-- `%x` → hexadecimal handler
-
-## Example Conversions
-
-```c
-ft_printf("%c\n", 'A');
-ft_printf("%s\n", "Hello");
-ft_printf("%d\n", -42);
-ft_printf("%u\n", 42);
-ft_printf("%x\n", 255);
-ft_printf("%X\n", 255);
-ft_printf("%p\n", ptr);
-ft_printf("%%\n");
-```
-
----
-
 ## Resources
 
 ### Documentation
