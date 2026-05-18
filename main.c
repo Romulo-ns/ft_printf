@@ -6,11 +6,11 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 12:31:32 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/18 12:31:41 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 13:20:17 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "lib/ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
 
