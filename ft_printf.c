@@ -6,38 +6,35 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:17:42 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/18 12:28:25 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 13:16:03 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int check_type(char c)
+int	check_type(char c)
 {
-	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' 
+	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i'
 		|| c == 'u' || c == 'x' || c == 'X' || c == '%')
 		return (1);
 	return (0);
 }
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
-	int	i;
-	int	count;
-	va_list args;
+	int		i;
+	int		count;
+	va_list	args;
 
 	count = 0;
 	i = 0;
 	va_start(args, str);
-	while(str[i])
+	while (str[i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && check_type(str[i + 1]))
 		{
-			if (check_type(str[i + 1]))
-			{
-				i++;
-				count += print_arg(str[i], args);
-			}
+			i++;
+			count += print_arg(str[i], args);
 		}
 		else
 		{
@@ -46,8 +43,6 @@ int ft_printf(const char *str, ...)
 		}
 		i++;
 	}
-
 	va_end(args);
 	return (count);
-	
 }

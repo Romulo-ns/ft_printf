@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:28:50 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/18 12:20:38 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 13:08:46 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putstr(char *args)
 {
 	size_t	len;
-	
+
 	len = 0;
 	if (!args)
 	{
@@ -26,5 +26,5 @@ int	ft_putstr(char *args)
 	{
 		len += ft_putchar(args[len]);
 	}
-	return(len);
+	return (len);
 }

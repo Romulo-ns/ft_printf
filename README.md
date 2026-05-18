@@ -71,6 +71,25 @@ make fclean
 make re
 ```
 
+------------------------------------------------------------------------
+Test Instructions
+Compile the library
+
+First, generate the static library using your Makefile:
+
+make
+Compile the test file
+
+Compile main.c and link it directly with the generated libftprintf.a:
+
+cc -Wall -Wextra -Werror main.c libftprintf.a -o test_runner
+Run the tests
+
+Execute the generated binary:
+
+./test_runner
+------------------------------------------------------------------------
+
 ## Resources
 
 ### Documentation
