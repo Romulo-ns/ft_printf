@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 16:48:33 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/15 17:19:36 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 11:53:49 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ static int  ft_putptr(unsigned long n)
     return (count);
 }
 
-int	ft_print_ptr(args)
+int	ft_print_ptr(unsigned long n)
 {
 	unsigned long	ptr;
     long            count;
 
-	ptr = (unsigned long)args;
+	ptr = (unsigned long)n;
 	write(1, "0x", 2);
     count = 2;
 	count += ft_putptr(ptr);

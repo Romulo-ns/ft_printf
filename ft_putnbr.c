@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:39:48 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/15 14:04:17 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 11:57:01 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int ft_putnbr(int n)
     long    nb;
 	char	c;
 
+	count = 0;
     nb = n;
 	if (nb < 0)
 	{
