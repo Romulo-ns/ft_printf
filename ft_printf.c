@@ -6,7 +6,7 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:17:42 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/18 11:44:25 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 12:28:25 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,4 @@ int ft_printf(const char *str, ...)
 	va_end(args);
 	return (count);
 	
-}
-
-int main (){
-	char	*ptr1;
-	int		nbm1;
-	char	*ptr2;
-
-
-	ptr1 = "ahhh%hhhhhhh";
-	nbm1 = 0;
-	ptr2 = "github";
-
-	ft_printf("oioi %% %s agora numeros: %x\n agora o ponteiro: %p\n", ptr1, nbm1, ptr2);
-	printf("oioi %% %s agora numeros: %x\n agora o ponteiro: %p\n", ptr1, nbm1, ptr2);
-
-	return(0);
 }

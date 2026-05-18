@@ -6,13 +6,13 @@
 /*   By: romdo-na <romdo-na@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 15:13:21 by romdo-na          #+#    #+#             */
-/*   Updated: 2026/05/18 11:56:24 by romdo-na         ###   ########.fr       */
+/*   Updated: 2026/05/18 12:26:58 by romdo-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
